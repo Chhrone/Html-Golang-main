@@ -1,79 +1,38 @@
-function addToOrder(name, price) {
-    // Implement the logic to add to the order here
-    // You might want to store the quantity and other details here
-    // For simplicity, let's assume quantity is always 1 in this example
-    fetch('/add-to-order', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name: name,
-            price: price,
-            quantity: 1, // Adjust as needed
-        }),
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Failed to add item to order');
-        }
-        // Refresh order details after adding an item
-        getOrderDetails();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
+var orderList = [];
+    var totalAmount = 0;
 
-function getOrderDetails() {
-    fetch('/order-details')
-    .then(response => response.json())
-    .then(order => {
-        // Update the HTML to display order details
-        const orderDetailsElement = document.querySelector('.order-details');
-        orderDetailsElement.innerHTML = '<div class="food-card">Order Details</div>';
-        
-        order.items.forEach(item => {
-            const foodCardElement = document.createElement('div');
-            foodCardElement.classList.add('food-card');
-            foodCardElement.textContent = `${item.name} - Quantity: ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
-            orderDetailsElement.appendChild(foodCardElement);
+    function addToOrder(foodName, price) {
+        orderList.push({ name: foodName, price: price });
+        totalAmount += price;
+
+        // Update the order details on the page
+        updateOrderDetails();
+    }
+
+    function updateOrderDetails() {
+        var orderListElement = document.getElementById('orderList');
+        var totalAmountElement = document.getElementById('totalAmount');
+
+        // Clear previous content
+        orderListElement.innerHTML = '';
+
+        // Populate the order list
+        orderList.forEach(function (item) {
+            var listItem = document.createElement('li');
+            listItem.textContent = item.name + ' - $' + item.price.toFixed(2);
+            orderListElement.appendChild(listItem);
         });
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
 
-function placeOrder() {
-    // Implement the logic to place the order
-    const userName = document.getElementById('user-name').value;
-    const tableNumber = document.getElementById('table-number').value;
+        // Update the total amount
+        totalAmountElement.textContent = totalAmount.toFixed(2);
+    }
 
-    // You may want to include additional validation here
-    
-    // Send the user name and table number to the server
-    fetch('/place-order', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            userName: userName,
-            tableNumber: tableNumber,
-        }),
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Failed to place order');
-        }
-        // Optionally, you can reset the order details after placing the order
-        getOrderDetails();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
+    function placeOrder() {
+        // Implement the logic to place the order, e.g., send a request to the server
+        alert('Order placed! Total amount: $' + totalAmount.toFixed(2));
 
-// Fetch and display initial order details when the page loads
-document.addEventListener('DOMContentLoaded', getOrderDetails);
+        // Reset order details after placing the order
+        orderList = [];
+        totalAmount = 0;
+        updateOrderDetails();
+    }
