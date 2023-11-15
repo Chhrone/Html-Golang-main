@@ -29,7 +29,7 @@
         <div class="grid-container">
             
             <div class="food-card">
-                <img src="/templates/image/ayam rica.jpg" alt="Food Image">
+                <img src="/static/image/Ayam/ayam rica.jpg" alt="Food Image">
                 <div class="card-content">
                     <div class="food-name">Ayam Rica-Rica</div>
                     <div class="food-price">$10.99</div>
@@ -38,7 +38,7 @@
             </div>
             
             <div class="food-card">
-                <img src="/templates/image/Ayam matah.jpg" alt="Food Image">
+                <img src="/static/image/Ayam/Ayam matah.jpg" alt="Food Image">
                 <div class="card-content">
                     <div class="food-name">Ayam Matah</div>
                     <div class="food-price">$10.99</div>
@@ -47,7 +47,7 @@
             </div>
             
             <div class="food-card">
-                <img src="/templates/image/Ayam geprek.jpg" alt="Food Image">
+                <img src="/static/image/Ayam/Ayam geprek.jpg" alt="Food Image">
                 <div class="card-content">
                     <div class="food-name">Ayam Geprek</div>
                     <div class="food-price">$10.99</div>
@@ -56,57 +56,216 @@
             </div>
 
             <div class="order-details">
-                <!-- User Information -->
-                <div>
-                    <label for="user-name">User Name:</label>
-                    <input type="text" id="user-name" required>
-                </div>
-                <div>
-                    <label for="table-number">Table Number:</label>
-                    <input type="text" id="table-number" required>
-                </div>
+                
             </div>
 
-                
-            <div class="food-card">Food Card 4</div>
-            <div class="food-card">Food Card 5</div>
-            <div class="food-card">Food Card 6</div>
+            <div class="food-card">
+                <img src="/static/image/Ayam/Bebek betutu.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Bebek Betutu</div>
+                    <div class="food-price">$15.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Bebek Betutu', 15.99)">Add to Order</button>
+            </div>
+
+            <div class="food-card">
+                <img src="/static/image/Ayam/Bebek Bakar.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Bebek Bakar</div>
+                    <div class="food-price">$15.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Bebek Bakar', 15.99)">Add to Order</button>
+            </div>
+
+            <div class="food-card">
+                <img src="/static/image/Ayam/Bebek Hitam Madura.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Bebek Hitam Madura</div>
+                    <div class="food-price">$15.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Bebek Hitam Madura', 15.99)">Add to Order</button>
+            </div>
         </div>
     </div>
 
     <div id="Mie" class="tabcontent">
         <div class="grid-container">
-            <div class="food-card">Food Card 1</div>
-            <div class="food-card">Food Card 2</div>
-            <div class="food-card">Food Card 3</div>
+            <div class="food-card">
+                <img src="/static/image/Mie/Mie Goreng.jpeg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Mie Goreng</div>
+                    <div class="food-price">$10.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Mie Goreng', 10.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Mie/Mie Kuah.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Mie Kuah</div>
+                    <div class="food-price">$10.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Mie Kuah', 10.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Mie/Mie Goreng Ayam.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Mie Goreng Ayam</div>
+                    <div class="food-price">$10.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Mie Goreng Ayam', 10.99)">Add to Order</button>
+            </div>
+
             <div class="order-details">Order Details</div>
-            <div class="food-card">Food Card 4</div>
-            <div class="food-card">Food Card 5</div>
-            <div class="food-card">Food Card 6</div>
+    
+            <div class="food-card">
+                <img src="/static/image/Mie/Kwetiaw.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Kwetiau</div>
+                    <div class="food-price">$10.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Kwetiau', 10.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Mie/Kwetiaw Seafood 1.jpeg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Kwetiau Seafood 1</div>
+                    <div class="food-price">$10.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Kwetiau Seafood 1', 10.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Mie/Kwetiaw Seafood 2.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Kwetiau Seafood 2</div>
+                    <div class="food-price">$10.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Kwetiau Seafood 2', 10.99)">Add to Order</button>
+            </div>
         </div>
     </div>
+    
 
     <div id="Minuman" class="tabcontent">
         <div class="grid-container">
-            <div class="food-card">Food Card 1</div>
-            <div class="food-card">Food Card 2</div>
-            <div class="food-card">Food Card 3</div>
+            <div class="food-card">
+                <img src="/static/image/Es/Es Tawar.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Es Tawar</div>
+                    <div class="food-price">$3.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Es Tawar', 3.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Es/Es Teh Manis.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Es Teh Manis</div>
+                    <div class="food-price">$4.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Es Teh Manis', 4.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Es/Es Jeruk.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Es Jeruk</div>
+                    <div class="food-price">$4.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Es Jeruk', 4.99)">Add to Order</button>
+            </div>
+
             <div class="order-details">Order Details</div>
-            <div class="food-card">Food Card 4</div>
-            <div class="food-card">Food Card 5</div>
-            <div class="food-card">Food Card 6</div>
+    
+            <div class="food-card">
+                <img src="/static/image/Es/Sop Buah Segar.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Sop Buah Segar</div>
+                    <div class="food-price">$6.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Sop Buah Segar', 6.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Es/Es Coklat.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Es Coklat</div>
+                    <div class="food-price">$5.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Es Coklat', 5.99)">Add to Order</button>
+            </div>
+    
+            <div class="food-card">
+                <img src="/static/image/Es/Es Cappucino.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Es Cappucino</div>
+                    <div class="food-price">$7.99</div>
+                </div>
+                <button class="button" onclick="addToOrder('Es Cappucino', 7.99)">Add to Order</button>
+            </div>
         </div>
-    </div>
+    </div>    
 
     <div id="Extra" class="tabcontent">
         <div class="grid-container">
-            <div class="food-card">Food Card 1</div>
-            <div class="food-card">Food Card 2</div>
-            <div class="food-card">Food Card 3</div>
+            <div class="food-card">
+                <img src="/static/image/Extra/Nasi.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Nasi Putih</div>
+                    <div class="food-price">$5</div>
+                </div>
+                <button class="button" onclick="addToOrder('Nasi Putih', 5)">Add to Order</button>
+            </div>
+
+            <div class="food-card">
+                <img src="/static/image/Extra/Kentang Goreng.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Kentang Goreng</div>
+                    <div class="food-price">$5</div>
+                </div>
+                <button class="button" onclick="addToOrder('Kentang Goreng', 5)">Add to Order</button>
+            </div>
+
+            <div class="food-card">
+                <img src="/static/image/Extra/Sambal Cabe Ijo.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Sambel Cabe Ijo</div>
+                    <div class="food-price">$5</div>
+                </div>
+                <button class="button" onclick="addToOrder('Sambel Cabe Ijo', 5)">Add to Order</button>
+            </div>
+
             <div class="order-details">Order Details</div>
-            <div class="food-card">Food Card 4</div>
-            <div class="food-card">Food Card 5</div>
-            <div class="food-card">Food Card 6</div>
+
+            <div class="food-card">
+                <img src="/static/image/Extra/Sambel Madura.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Sambel Madura</div>
+                    <div class="food-price">$5</div>
+                </div>
+                <button class="button" onclick="addToOrder('Sambel Madura', 5)">Add to Order</button>
+            </div>
+            
+            <div class="food-card">
+                <img src="/static/image/Extra/Sambel Terasi.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Sambel Terasi</div>
+                    <div class="food-price">$5</div>
+                </div>
+                <button class="button" onclick="addToOrder('Sambel Terasi', 5)">Add to Order</button>
+            </div>
+
+           <div class="food-card">
+                <img src="/static/image/Extra/Sambel Matah.jpg" alt="Food Image">
+                <div class="card-content">
+                    <div class="food-name">Sambel Matah</div>
+                    <div class="food-price">$5</div>
+                </div>
+                <button class="button" onclick="addToOrder('Sambel Matah', 5)">Add to Order</button>
+            </div>
         </div>
     </div>
 
