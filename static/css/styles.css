@@ -73,8 +73,8 @@ body {
 
   .grid-container {
     min-height: 80%;
-    width: 90%; /* Adjust the width as needed */
-    margin: 0 auto; /* Center the grid container horizontally */
+    width: 90%; 
+    margin: 0 auto; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -117,14 +117,19 @@ body {
 }
 
 .food-card .button {
-    height: 40px; /* Increase the height for better visibility */
-    max-width: 100%; /* Adjust the max-width to ensure it doesn't overflow */
-    background-color: #e44d26; /* Your chosen button color */
-    color: #fff; /* Text color */
+    height: 40px; 
+    max-width: 100%; 
+    background-color: #e44d26; 
+    color: #fff; 
     border: none;
     border-radius: 4px;
-    padding: 5px 15px; /* Adjust padding for better button appearance */
+    padding: 5px 15px; 
     cursor: pointer;
+}
+
+.food-card .button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 .card-content {
